@@ -1,0 +1,27 @@
+    _        _                     _             __    ____            _
+   / \    __| |__   __ ___  _ __  | |_    ___   / _|  / ___| ___    __| |  ___
+  / _ \  / _` |\ \ / // _ \| '_ \ | __|  / _ \ | |_  | |    / _ \  / _` | / _ \
+ / ___ \| (_| | \ V /|  __/| | | || |_  | (_) ||  _| | |___| (_) || (_| ||  __/
+/_/   \_\\__,_|  \_/  \___||_| |_| \__|  \___/ |_|    \____|\___/  \__,_| \___|
+
+                           ____    ___  ____    ___
+                          |___ \  / _ \|___ \  / _ \
+                            __) || | | | __) || | | |
+                           / __/ | |_| |/ __/ | |_| |
+                          |_____| \___/|_____| \___/
+
+Overview
+========
+Advent of Code is an Advent Calendar of small programming puzzles that can be solved in any language. Even if it's hard one day, the next day might be easier, however generally the difficulty of the challenges does increase as you get further into the event.
+
+Contents
+========
+├── Day 1
+│   ├── input
+│   ├── puzzle-1.c
+│   └── puzzle-2.c
+│  
+└── Day 2
+    ├── input
+    ├── puzzle-1.awk
+    └── puzzle-2.awk
