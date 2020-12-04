@@ -6,8 +6,11 @@ BEGIN {
 
 {
     len = split($0, obs, "")
-    if (x > len) { x -= len }
-    if (obs[x] == "#") { count++ }
+
+    if (x > len)
+        x -= len
+    if (obs[x] == "#") 
+        count++
 
     x += 3
 }

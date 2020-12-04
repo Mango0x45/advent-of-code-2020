@@ -3,11 +3,11 @@
 # Blank lines
 /^$/ {
     valid = 1
-    for (i in fields) {
-        if (fields[i] == "") { valid = 0 }
-    }
+    for (i in fields)
+        if (fields[i] == "") valid = 0
 
-    if (valid == 1) { count++ }
+    if (valid == 1)
+        count++
 
     fields["byr"] = ""
     fields["iyr"] = ""

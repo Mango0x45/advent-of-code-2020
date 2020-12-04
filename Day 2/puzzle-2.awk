@@ -7,10 +7,13 @@
 
     # Count the frequency of char
     freq = 0
-    if (str[pos[1]] == char) { freq++ }
-    if (str[pos[2]] == char) { freq++ }
+    if (str[pos[1]] == char)
+        freq++
+    if (str[pos[2]] == char)
+        freq++
 
-    if (freq == 1) { count++ }
+    if (freq == 1)
+        count++
 }
 
 END {

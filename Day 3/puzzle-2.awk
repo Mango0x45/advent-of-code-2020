@@ -1,9 +1,8 @@
 #!/bin/awk -f
 
 BEGIN {
-    for (i = 1; i <= 5; i++) {
+    for (i = 1; i <= 5; i++)
         slope[i] = 1
-    }
 }
 
 {
@@ -11,13 +10,11 @@ BEGIN {
 
     right = 1
     for (i = 1; i < 5; i++) {
-        if (slope[i] > len) {
+        if (slope[i] > len)
             slope[i] -= len
-        }
 
-        if (obs[slope[i]] == "#") {
+        if (obs[slope[i]] == "#")
             count[i]++
-        }
 
         slope[i] += right
         right += 2
@@ -25,13 +22,11 @@ BEGIN {
 
     # Specific code for slope 5
     if (NR % 2 == 1) {
-        if (slope[5] > len) {
+        if (slope[5] > len)
             slope[5] -= len
-        }
 
-        if (obs[slope[5]++] == "#") {
+        if (obs[slope[5]++] == "#")
             count[5]++
-        }
     }
 }
 

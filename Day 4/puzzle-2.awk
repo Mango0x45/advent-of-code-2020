@@ -28,35 +28,39 @@ BEGIN {
     } else {
         # Test eyecolor
         valid = 0
-        for (i in eyecolor) {
-            if (fields["ecl"] == eyecolor[i]) { valid = 1 }
-        }
+        for (i in eyecolor)
+            if (fields["ecl"] == eyecolor[i])
+                valid = 1
 
         # Test height
         split(fields["hgt"], height, "[^0-9]")
         unit = substr(fields["hgt"], length(fields["hgt"] - length(height[1])) + 1)
         if (unit == "cm") {
-            if (!(height[1] >= 150 && height[1] <= 193)) {
+            if (!(height[1] >= 150 && height[1] <= 193))
                 valid = 0
-            }
         } else if (unit == "in") {
-            if (!(height[1] >= 59 && height[1] <= 76)) {
+            if (!(height[1] >= 59 && height[1] <= 76))
                 valid = 0
-            }
-        } else { valid = 0 }
+        } else {
+            valid = 0
+        }
 
         # Test haircolor
         if (length(fields["hcl"]) == 7) {
             hair = match(fields["hcl"], "[0-9a-f]{6}")
-            if (hair == 0) { valid = 0 }
-            else {
+            if (hair == 0) { 
+                valid = 0
+            } else {
                 hash = substr(fields["hcl"], 1, 1)
-                if (hash != "#") { valid = 0 }
+                if (hash != "#")
+                    valid = 0
             }
-        } else { valid = 0 }
+        } else {
+            valid = 0
+        }
     }
 
-    if (valid == 1) { count++ }
+    if (valid == 1) count++
 
     fields["byr"] = ""
     fields["iyr"] = ""
