@@ -1,17 +1,9 @@
 #!/bin/awk -f
 
 BEGIN {
-    slope[1] = 1
-    slope[2] = 1
-    slope[3] = 1
-    slope[4] = 1
-    slope[5] = 1
-
-    count[1] = 0
-    count[2] = 0
-    count[3] = 0
-    count[4] = 0
-    count[5] = 0
+    for (i = 1; i <= 5; i++) {
+        slope[i] = 1
+    }
 }
 
 {
