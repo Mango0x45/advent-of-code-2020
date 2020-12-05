@@ -18,7 +18,6 @@ int main(void)
     fclose(input);
 
     /* Inefficient, but small sample size so it's fine */
-    int result;
     for (int i = 0; i < 199; i++)
         for (int j = i + 1; j < 200; j++)
             if (nums[i] + nums[j] == 2020) {

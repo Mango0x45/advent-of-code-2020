@@ -18,7 +18,6 @@ int main(void)
     fclose(input);
 
     /* Inefficient, but small sample size so it's fine */
-    int result;
     for (int i = 0; i < 198; i++)
         for (int j = i + 1; j < 199; j++)
             for (int k = j + 1; k < 200; k++)
