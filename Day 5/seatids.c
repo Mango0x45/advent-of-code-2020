@@ -39,7 +39,7 @@ int main(void)
         }
 
         /* `<< 3` is a multiplication by 8 */
-        int seat_id = upper_r << 3 + upper_c;
+        int seat_id = (upper_r << 3) + upper_c;
         printf("%d\n", seat_id);
     }
 
