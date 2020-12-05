@@ -14,14 +14,16 @@ Overview
 ========
 Advent of Code is an Advent Calendar of small programming puzzles that can be solved in any language. Even if it's hard one day, the next day might be easier, however generally the difficulty of the challenges does increase as you get further into the event.
 
-Contents
+Languages
 ========
 ├── Day 1
-│   ├── input
-│   ├── puzzle-1.c
-│   └── puzzle-2.c
-│  
-└── Day 2
-    ├── input
-    ├── puzzle-1.awk
-    └── puzzle-2.awk
+│   └── C
+├── Day 2
+│   └── Awk
+├── Day 3
+│   └── Awk
+├── Day 4
+│   └── Awk
+└── Day 5
+    ├── Awk
+    └── C
