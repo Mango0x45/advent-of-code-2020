@@ -16,14 +16,5 @@ Advent of Code is an Advent Calendar of small programming puzzles that can be so
 
 Languages
 ========
-├── Day 1
-│   └── C
-├── Day 2
-│   └── Awk
-├── Day 3
-│   └── Awk
-├── Day 4
-│   └── Awk
-└── Day 5
-    ├── Awk
-    └── C
+Awk
+C
