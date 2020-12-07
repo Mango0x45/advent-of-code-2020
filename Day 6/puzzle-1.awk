@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/env -S awk -f puzzle-1.awk input
 
 BEGIN {
     RS = ""

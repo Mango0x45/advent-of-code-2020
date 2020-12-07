@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/env -S awk -f puzzle-2.awk input
 
 BEGIN {
     for (i = 1; i <= 5; i++)

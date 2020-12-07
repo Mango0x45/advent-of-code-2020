@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/env -S awk -f
 
 # Run with `./seatids | ./puzzle-1.awk`
 

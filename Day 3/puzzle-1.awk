@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/env -S awk -f puzzle-1.awk input
 
 BEGIN {
     x = 1
@@ -9,7 +9,7 @@ BEGIN {
 
     if (x > len)
         x -= len
-    if (obs[x] == "#") 
+    if (obs[x] == "#")
         count++
 
     x += 3

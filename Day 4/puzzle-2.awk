@@ -1,7 +1,6 @@
-#!/bin/awk -f
+#!/usr/bin/env -S awk -f puzzle-2.awk input
 
 # The ugliest script so far!
-# NOTE: FOR THIS TO WORK, YOU MUST ADD A NEWLINE AT THE END OF THE INPUT FILE
 
 BEGIN {
     eyecolor[1] = "amb"
@@ -48,7 +47,7 @@ BEGIN {
         # Test haircolor
         if (length(fields["hcl"]) == 7) {
             hair = match(fields["hcl"], "[0-9a-f]{6}")
-            if (hair == 0) { 
+            if (hair == 0) {
                 valid = 0
             } else {
                 hash = substr(fields["hcl"], 1, 1)
