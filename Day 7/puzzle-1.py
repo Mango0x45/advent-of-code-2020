@@ -2,7 +2,7 @@
 
 
 # Recursively check if a bag can hold a shiny gold bag
-def holds_bag(innerbags: list) -> bool:
+def holds_bag(innerbags: list[str]) -> bool:
     if "no other" in innerbags:
         return False
     elif "shiny gold" in innerbags:

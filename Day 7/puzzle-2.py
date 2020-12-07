@@ -2,7 +2,7 @@
 
 
 # Recursively find the number of sub-bags in a bag
-def total_bags(innerbags: list) -> int:
+def total_bags(innerbags: list[dict[int, str]]) -> int:
     if innerbags[0]["name"] == "no other":
         return 0
 
