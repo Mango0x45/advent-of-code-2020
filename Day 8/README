@@ -1,0 +1,20 @@
+               _   _                    _  _            _      _ 
+              | | | |  __ _  _ __    __| || |__    ___ | |  __| |
+              | |_| | / _` || '_ \  / _` || '_ \  / _ \| | / _` |
+              |  _  || (_| || | | || (_| || | | ||  __/| || (_| |
+              |_| |_| \__,_||_| |_| \__,_||_| |_| \___||_| \__,_|
+                                                                 
+                     _   _         _  _    _               
+                    | | | |  __ _ | || |_ (_) _ __    __ _ 
+                    | |_| | / _` || || __|| || '_ \  / _` |
+                    |  _  || (_| || || |_ | || | | || (_| |
+                    |_| |_| \__,_||_| \__||_||_| |_| \__, |
+                                                     |___/ 
+
+Overview
+========
+Part 1:
+    Find the value of the accumulator before the circuit enters an infinite loop
+
+Part 2:
+    Fix the infinite loop, and find the value of the accumulator
