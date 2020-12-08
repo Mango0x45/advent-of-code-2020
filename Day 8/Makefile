@@ -2,3 +2,4 @@ CFLAGS=-Ofast -std=c99 -pedantic -Wall -Wextra -Wmissing-prototypes -Wstrict-pro
 
 all:
 	$(CC) -o puzzle-1 puzzle-1.c $(CFLAGS)
+	$(CC) -o puzzle-2 puzzle-2.c $(CFLAGS)
