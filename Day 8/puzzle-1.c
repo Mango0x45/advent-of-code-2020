@@ -76,7 +76,8 @@ int main(void)
             break;
 
         case 'a':
-            acc += circuit[i].val; __attribute__ ((fallthrough));
+            acc += circuit[i].val;
+            __attribute__ ((fallthrough));
 
         default:
             lines[l++] = i++;
