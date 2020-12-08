@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#define LINECOUNT 653
+
 typedef struct instructions {
     char opp;
     int val;
@@ -9,7 +11,7 @@ typedef struct instructions {
 
 /* Function prototypes */
 int str2int(const char *str);
-bool repeati(const int lines[], const int i);
+bool repeati(const int lines[], const int rip);
 
 /**
  * Convert a string to an integer
@@ -33,10 +35,10 @@ int str2int(const char *str)
  * Check if the given instruction has been
  * executed already
  */
-bool repeati(const int lines[], const int i)
+bool repeati(const int lines[], const int rip)
 {
-    for (int j = 0; j < 653; j++)
-        if (lines[j] == i)
+    for (int i = 0; i < LINECOUNT; i++)
+        if (lines[i] == rip)
             return true;
     return false;
 }
@@ -44,7 +46,7 @@ bool repeati(const int lines[], const int i)
 int main(void)
 {
     FILE *fpt = fopen("input", "r");
-    INST circuit[653];
+    INST circuit[LINECOUNT];
 
     /* Current line */
     char cl[10];
@@ -63,30 +65,39 @@ int main(void)
 
         circuit[i++] = operation;
     }
+    fclose(fpt);
 
     int acc = 0;
-    int l = i = 0;
-    int lines[653] = {0};
+    int rip = i = 0;
+    int lines[LINECOUNT] = {0};
 
     /* Execute the circuit */
-    while (repeati(lines, i + 1) == false) {
-        switch (circuit[i].opp) {
+    while (true) {
+        lines[i] = rip;
+
+        switch (circuit[rip].opp) {
         case 'j':
-            i += circuit[i].val;
+            rip += circuit[rip].val;
+            if (rip == LINECOUNT) {
+                puts("Success!");
+                goto END;
+            }
             break;
 
         case 'a':
-            acc += circuit[i].val;
+            acc += circuit[rip].val;
             __attribute__ ((fallthrough));
 
         default:
-            lines[l++] = i++;
+            rip++;
             break;
         }
+        i++;
+
+        if (repeati(lines, rip) == true)
+            break;
     }
 
-    printf("%d\n", acc);
-
-    fclose(fpt);
+END:printf("%d\n", acc);
     return 0;
 }
