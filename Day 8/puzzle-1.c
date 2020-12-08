@@ -78,17 +78,13 @@ int main(void)
         switch (circuit[rip].opp) {
         case 'j':
             rip += circuit[rip].val;
-            if (rip == LINECOUNT) {
-                puts("Success!");
-                goto END;
-            }
             break;
 
         case 'a':
             acc += circuit[rip].val;
             __attribute__ ((fallthrough));
 
-        default:
+        case 'n':
             rip++;
             break;
         }
@@ -98,6 +94,6 @@ int main(void)
             break;
     }
 
-END:printf("%d\n", acc);
+    printf("%d\n", acc);
     return 0;
 }
