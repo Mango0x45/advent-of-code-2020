@@ -69,7 +69,7 @@ int run_circuit(INST circuit[])
             acc += circuit[rip].val;
             __attribute__ ((fallthrough));
 
-        default:
+        case 'n':
             rip++;
             break;
         }
