@@ -1,0 +1,19 @@
+                _____                         _  _               
+               | ____| _ __    ___  ___    __| |(_) _ __    __ _ 
+               |  _|  | '_ \  / __|/ _ \  / _` || || '_ \  / _` |
+               | |___ | | | || (__| (_) || (_| || || | | || (_| |
+               |_____||_| |_| \___|\___/  \__,_||_||_| |_| \__, |
+                                                           |___/ 
+                         _____                         
+                        | ____| _ __  _ __  ___   _ __ 
+                        |  _|  | '__|| '__|/ _ \ | '__|
+                        | |___ | |   | |  | (_) || |   
+                        |_____||_|   |_|   \___/ |_|   
+                                                       
+Overview
+========
+Part 1:
+    Find the first number that is not a sum of 2 of the previous 25 numbers
+
+Part 2:
+    Find the sum of the smallest and largest numbers from the sublist which sums to the result of part 1
