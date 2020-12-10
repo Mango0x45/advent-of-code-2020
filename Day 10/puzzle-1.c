@@ -47,15 +47,15 @@ void merge_sort(int low, int high)
         merge_sort(mid + 1, high);
         merge(low, mid, high);
     }
-    
+
     return;
 }
 
 int main(void)
 {
-	int i = 0;
+    int i = 0;
 
-	FILE* fpt = fopen("input", "r");
+    FILE* fpt = fopen("input", "r");
     while (fscanf(fpt, "%d", &array[i++]) == 1);
     fclose(fpt);
 
