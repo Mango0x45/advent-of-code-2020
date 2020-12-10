@@ -1,0 +1,20 @@
+                     _        _                _              
+                    / \    __| |  __ _  _ __  | |_  ___  _ __ 
+                   / _ \  / _` | / _` || '_ \ | __|/ _ \| '__|
+                  / ___ \| (_| || (_| || |_) || |_|  __/| |   
+                 /_/   \_\\__,_| \__,_|| .__/  \__|\___||_|   
+                                       |_|                    
+                           _                             
+                          / \    _ __  _ __  __ _  _   _ 
+                         / _ \  | '__|| '__|/ _` || | | |
+                        / ___ \ | |   | |  | (_| || |_| |
+                       /_/   \_\|_|   |_|   \__,_| \__, |
+                                                   |___/ 
+
+Overview
+========
+Part 1:
+    Find the product of the number of differences of 1 jolt and 3 jolts in the adaptor chain
+
+Part 2:
+    Find the total number of legal adaptor chains
