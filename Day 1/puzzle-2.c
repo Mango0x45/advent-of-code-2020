@@ -1,5 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
+
+#ifdef BUFSIZ
+#   undef BUFSIZ
+#endif
+#define BUFSIZ 200
 
 int main(void)
 {
@@ -7,24 +11,24 @@ int main(void)
 
     if (input == NULL) {
         perror("Error: Unable to open file 'input'");
-        exit(EXIT_FAILURE);
+        return 1;
     }
 
-    int nums[200];
+    int nums[BUFSIZ];
 
-    for (int i = 0; i < 200; i++)
+    for (int i = 0; i < BUFSIZ; i++)
         fscanf(input, "%d", &nums[i]);
 
     fclose(input);
 
     /* Inefficient, but small sample size so it's fine */
-    for (int i = 0; i < 198; i++)
-        for (int j = i + 1; j < 199; j++)
-            for (int k = j + 1; k < 200; k++)
+    for (int i = 0; i < BUFSIZ - 2; i++)
+        for (int j = i + 1; j < BUFSIZ - 1; j++)
+            for (int k = j + 1; k < BUFSIZ; k++)
                 if (nums[i] + nums[j] + nums[k] == 2020) {
                     printf("%d\n", nums[i] * nums[j] * nums[k]);
-                    return EXIT_SUCCESS;
+                    return 0;
                 }
 
-    return EXIT_FAILURE;
+    return 1;
 }
