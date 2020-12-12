@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int str2int(const char *str);
+int str2int(char const *const str);
 
 /**
  * Convert a string to an integer
  */
-int str2int(const char *str)
+int str2int(char const *const str)
 {
-    int ret = 0;
+    register unsigned int ret = 0;
     /* i = 1 to skip the first character */
     for (int i = 1, len = strlen(str); i < len; i++) {
         if (str[i] == '\n')
@@ -23,7 +23,7 @@ int main(void)
 {
     FILE *fpt = fopen("input", "r");
     char cl[5];
-    int cl_size = sizeof(cl);
+    unsigned int const cl_size = sizeof(cl);
     int north = 0, east = 0;
     int direction = 0;
 
@@ -58,13 +58,13 @@ WRAP:       if (direction >= 360)
             else if (direction < 0)
                 direction += 360;
             break;
-        
+
         case 'F':
             switch (direction) {
             case 0:
                 east += str2int(cl);
                 break;
-            
+
             case 90:
                 north -= str2int(cl);
                 break;
@@ -72,7 +72,7 @@ WRAP:       if (direction >= 360)
             case 180:
                 east -= str2int(cl);
                 break;
-            
+
             case 270:
                 north += str2int(cl);
                 break;

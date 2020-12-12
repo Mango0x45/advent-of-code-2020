@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int str2int(const char *str);
+int str2int(char const *const str);
 
 struct coords {
     int north;
@@ -11,9 +11,9 @@ struct coords {
 /**
  * Convert a string to an integer
  */
-int str2int(const char *str)
+int str2int(char const *const str)
 {
-    int ret = 0;
+    register unsigned int ret = 0;
     /* i = 1 to skip the first character */
     for (int i = 1, len = strlen(str); i < len; i++) {
         if (str[i] == '\n')
@@ -28,7 +28,7 @@ int main(void)
 {
     FILE *fpt = fopen("input", "r");
     char cl[6];
-    int cl_size = sizeof(cl);
+    unsigned int const cl_size = sizeof(cl);
     struct coords waypoint = {1, 10};
     struct coords ship = {0, 0};
 
@@ -51,7 +51,7 @@ int main(void)
             break;
 
         case 'F': ;
-            int val = str2int(cl);
+            unsigned int const val = str2int(cl);
             ship.north += val * waypoint.north;
             ship.east += val * waypoint.east;
             break;
@@ -65,13 +65,13 @@ int main(void)
                 waypoint.north *= -1;
                 waypoint.east *= -1;
                 break;
-            } 
+            }
 
             /* 0 <= direction < 360 */
             if (cl[0] == 'R')
                 direction = direction * -1 + 360;
 
-            int temp = waypoint.east;
+            unsigned int const temp = waypoint.east;
             /* (x, y) -> (-y, x) */
             if (direction == 90) {
                 waypoint.east = waypoint.north * -1;
