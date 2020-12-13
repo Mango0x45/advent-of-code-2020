@@ -71,7 +71,7 @@ int main(void)
             if (cl[0] == 'R')
                 direction = direction * -1 + 360;
 
-            unsigned int const temp = waypoint.east;
+            int const temp = waypoint.east;
             /* (x, y) -> (-y, x) */
             if (direction == 90) {
                 waypoint.east = waypoint.north * -1;
