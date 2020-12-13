@@ -26,12 +26,11 @@ def mul_inv(a: int, b: int) -> int:
 
 
 with open("input", "r") as f:
-    ids = tuple(map(lambda x: int(x) if x.isdigit() else x, f.readlines()[1].split(",")))
+    ids = tuple(
+        map(lambda x: int(x) if x.isdigit() else x, f.readlines()[1].split(","))
+    )
 
 buses = tuple(filter(lambda x: x != "x", ids))
+modres = tuple(x if (x := bus - ids.index(bus)) != bus else 0 for bus in buses)
 
-a = tuple(x if (x := bus - ids.index(bus)) != bus else 0 for bus in buses)
-
-n = tuple(bus for bus in buses)
-
-print(chinese_remainder(n, a))
+print(chinese_remainder(buses, modres))
