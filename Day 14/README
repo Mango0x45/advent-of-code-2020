@@ -1,0 +1,14 @@
+      ____                _     _                 ____          _         
+     |  _ \   ___    ___ | | __(_) _ __    __ _  |  _ \   __ _ | |_  __ _ 
+     | | | | / _ \  / __|| |/ /| || '_ \  / _` | | | | | / _` || __|/ _` |
+     | |_| || (_) || (__ |   < | || | | || (_| | | |_| || (_| || |_| (_| |
+     |____/  \___/  \___||_|\_\|_||_| |_| \__, | |____/  \__,_| \__|\__,_|
+                                          |___/                           
+
+Overview
+========
+Part 1:
+    Find the sum of all values in the memory addresses
+
+Part 2:
+    Find the sum of all values in the memory addresses (but they're added a bit differently)
