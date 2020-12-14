@@ -27,7 +27,7 @@ with open("input", "r") as f:
     lines = f.read().splitlines()
 
 mem = {}
-
+mask = ""
 for line in lines:
     line = line.split(" ")
     if line[0] == "mask":
