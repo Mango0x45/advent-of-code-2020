@@ -9,14 +9,8 @@
 int main(void)
 {
     FILE *fpt = fopen("input", "r");
-    if (fpt == NULL) {
-        perror("Error: Unable to open file 'input'");
-        return 1;
-    }
-
     /* +2 for \n and \0 */
     char bpass[12];
-
     while (fgets(bpass, 12, fpt) != NULL) {
         /* Seat Row */
         int lower_r = 0;

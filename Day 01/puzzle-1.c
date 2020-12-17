@@ -9,13 +9,7 @@ int main(void)
 {
     FILE *input = fopen("input", "r");
 
-    if (input == NULL) {
-        perror("Error: Unable to open file 'input'");
-        return 1;
-    }
-
     int nums[BUFSIZ];
-
     for (int i = 0; i < BUFSIZ; i++)
         fscanf(input, "%d", &nums[i]);
 
