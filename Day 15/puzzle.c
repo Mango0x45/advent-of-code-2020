@@ -1,12 +1,13 @@
-/**
- * The exact same as puzzle-1.c, but a different buffer size
- */
 #include <stdio.h>
 
 #ifdef BUFSIZ
 #   undef BUFSIZ
 #endif
-#define BUFSIZ 30000000
+#ifndef PART2
+#   define BUFSIZ 2020
+#else
+#   define BUFSIZ 30000000
+#endif
 
 int main(void)
 {

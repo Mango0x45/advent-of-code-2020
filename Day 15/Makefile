@@ -5,5 +5,5 @@ CFLAGS=-Ofast -std=c99 -Wpedantic -Wall -Wextra -Wmissing-prototypes \
 	-Werror=implicit-function-declaration -Wundef -Wshadow -Wmissing-declarations
 
 all:
-	$(CC) -o puzzle-1 puzzle-1.c $(CFLAGS)
-	$(CC) -o puzzle-2 puzzle-2.c $(CFLAGS)
+	$(CC) -o puzzle-1 puzzle.c $(CFLAGS)
+	$(CC) -o puzzle-2 puzzle.c $(CFLAGS) -DPART2
