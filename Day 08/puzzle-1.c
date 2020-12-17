@@ -10,13 +10,13 @@ typedef struct instructions {
 } INST;
 
 /* Function prototypes */
-int str2int(const char *str);
-bool repeati(const int lines[], const int rip);
+int str2int(char const * const str);
+bool repeati(int const * const lines, int const rip);
 
 /**
  * Convert a string to an integer
  */
-int str2int(const char *str)
+int str2int(char const * const str)
 {
     int ret = 0;
     for (int i = 0, len = strlen(str); i < len; i++) {
@@ -35,7 +35,7 @@ int str2int(const char *str)
  * Check if the given instruction has been
  * executed already
  */
-bool repeati(const int lines[], const int rip)
+bool repeati(int const * const lines, int const rip)
 {
     for (int i = 0; i < LINECOUNT; i++)
         if (lines[i] == rip)

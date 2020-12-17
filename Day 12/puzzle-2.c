@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int str2int(char const *const str);
+int str2int(char const * const str);
 
 struct coords {
     int north;
@@ -11,7 +11,7 @@ struct coords {
 /**
  * Convert a string to an integer
  */
-int str2int(char const *const str)
+int str2int(char const * const str)
 {
     register unsigned int ret = 0;
     /* i = 1 to skip the first character */

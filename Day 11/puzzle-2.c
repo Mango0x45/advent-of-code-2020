@@ -10,12 +10,12 @@ bool changed;
 char rows[ROWCNT][ROWLEN + 1];
 char temp[ROWCNT][ROWLEN + 1];
 
-void check_seat(const int i, const int j);
+void check_seat(int const i, int const j);
 
 /**
  * Check and update a seat at the given index
  */
-void check_seat(const int i, const int j)
+void check_seat(int const i, int const j)
 {
     if (rows[i][j] == '.')
         return;
