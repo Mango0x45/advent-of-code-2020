@@ -84,7 +84,7 @@ int main(void)
 {
     FILE *fpt = fopen("input", "r");
     char *line;
-    size_t len = 0;
+    size_t len;
     ssize_t read;
 
     unsigned long long acc = 0;
