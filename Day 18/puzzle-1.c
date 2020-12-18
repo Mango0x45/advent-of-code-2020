@@ -71,7 +71,7 @@ void remove_spaces(char *str)
 int main(void)
 {
     FILE *fpt = fopen("input", "r");
-    char *line = NULL;
+    char *line;
     size_t len = 0;
     ssize_t read;
 
