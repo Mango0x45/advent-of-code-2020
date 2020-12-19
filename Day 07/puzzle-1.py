@@ -21,9 +21,7 @@ for baginfo in lines:
     data = baginfo.split(" bags contain")
 
     # { bag_name: [contained_bag_1, containted_bag_2, ...] }
-    bdict[data[0]] = [
-        " ".join(b.split(" ")[-3:][:2]) for b in data[1].split(",")
-    ]
+    bdict[data[0]] = [" ".join(b.split(" ")[-3:][:2]) for b in data[1].split(",")]
 
 count = 0
 for bag in bdict:
